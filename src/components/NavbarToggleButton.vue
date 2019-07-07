@@ -1,12 +1,14 @@
 <template>
-    <button class="navbar-toggler" type="button"
-            data-toggle="collapse"
-            :data-target="target"
-            :aria-controls="target"
-            :aria-expanded="toggled"
-            aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+  <button 
+    :data-target="target" 
+    :aria-controls="target"
+    :aria-expanded="toggled"
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"/>
+  </button>
 </template>
 <script>
 export default {

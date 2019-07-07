@@ -1,21 +1,22 @@
 <template>
-    <div class="icon icon-shape"
-         :class="[
-            size && `icon-${size}`,
-            type && `icon-shape-${type}`,
-            gradient && `bg-gradient-${gradient}`,
-            shadow && 'shadow',
-            rounded && 'rounded-circle',
-            color && `text-${color}`
-         ]">
-        <slot>
-            <i :class="name"></i>
-        </slot>
-    </div>
+  <div 
+    :class="[
+      size && `icon-${size}`,
+      type && `icon-shape-${type}`,
+      gradient && `bg-gradient-${gradient}`,
+      shadow && 'shadow',
+      rounded && 'rounded-circle',
+      color && `text-${color}`
+    ]"
+    class="icon icon-shape">
+    <slot>
+      <i :class="name"/>
+    </slot>
+  </div>
 </template>
 <script>
 export default {
-  name: "icon",
+  name: "Icon",
   props: {
     name: {
       type: String,

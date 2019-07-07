@@ -1,15 +1,16 @@
 <template>
-  <div class="tab-pane fade"
-       :id="id || label"
-       :class="{'active show': active}"
-       v-show="active"
-       :aria-expanded="active">
-    <slot></slot>
+  <div 
+    v-show="active"
+    :id="id || label"
+    :class="{'active show': active}"
+    :aria-expanded="active"
+    class="tab-pane fade">
+    <slot/>
   </div>
 </template>
 <script>
 export default {
-  name: "tab-pane",
+  name: "TabPane",
   props: ["label", "id", "title"],
   inject: ["addTab", "removeTab"],
   data() {

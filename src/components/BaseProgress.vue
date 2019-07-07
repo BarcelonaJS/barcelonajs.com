@@ -3,30 +3,32 @@
     <div :class="`progress-${type}`">
       <div class="progress-label">
         <slot name="label">
-          <span>{{label}}</span>
+          <span>{{ label }}</span>
         </slot>
       </div>
       <div class="progress-percentage">
         <slot>
-          <span>{{value}}%</span>
+          <span>{{ value }}%</span>
         </slot>
       </div>
     </div>
-    <div class="progress" :style="`height: ${height}px`">
-      <div class="progress-bar"
-           :class="computedClasses"
-           role="progressbar"
-           :aria-valuenow="value"
-           aria-valuemin="0"
-           aria-valuemax="100"
-           :style="`width: ${value}%;`">
-      </div>
+    <div 
+      :style="`height: ${height}px`" 
+      class="progress">
+      <div 
+        :class="computedClasses"
+        :aria-valuenow="value"
+        :style="`width: ${value}%;`"
+        class="progress-bar"
+        role="progressbar"
+        aria-valuemin="0"
+        aria-valuemax="100"/>
     </div>
   </div>
 </template>
 <script>
 export default {
-  name: "base-progress",
+  name: "BaseProgress",
   props: {
     striped: {
       type: Boolean,

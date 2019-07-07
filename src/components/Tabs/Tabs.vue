@@ -2,31 +2,33 @@
   <component :is="layoutComponent">
     <template slot="nav">
       <div class="nav-wrapper">
-        <ul class="nav"
-            role="tablist"
-            :class="
+        <ul 
+          :class="
             [type ? `nav-pills-${type}`: '',
-              pills ? 'nav-pills': 'nav-tabs',
+             pills ? 'nav-pills': 'nav-tabs',
              {'nav-pills-icons': icons},
              {'nav-fill': fill},
              {'nav-pills-circle': circle},
              {'justify-content-center': centered},
              tabNavClasses
-            ]">
+          ]"
+          class="nav"
+          role="tablist">
 
-          <li v-for="tab in tabs"
-              class="nav-item"
-              :key="tab.id || tab.title">
+          <li 
+            v-for="tab in tabs"
+            :key="tab.id || tab.title"
+            class="nav-item">
 
-            <a data-toggle="tab"
-               role="tab"
-               class="nav-link"
-               :href="`#${tab.id || tab.title}`"
-               @click.prevent="activateTab(tab)"
-               :aria-selected="tab.active"
-               :class="{active: tab.active}">
-              <tab-item-content :tab="tab">
-              </tab-item-content>
+            <a 
+              :href="`#${tab.id || tab.title}`"
+              :aria-selected="tab.active"
+              :class="{active: tab.active}"
+              data-toggle="tab"
+              role="tab"
+              class="nav-link"
+              @click.prevent="activateTab(tab)">
+              <tab-item-content :tab="tab"/>
             </a>
 
           </li>
@@ -34,9 +36,11 @@
         </ul>
       </div>
     </template>
-    <div slot="content" class="tab-content"
-         :class="[tabContentClasses]">
-      <slot v-bind="slotData"></slot>
+    <div 
+      slot="content" 
+      :class="[tabContentClasses]"
+      class="tab-content">
+      <slot v-bind="slotData"/>
     </div>
   </component>
 </template>
@@ -45,7 +49,7 @@
 import PillsLayout from "./PillsLayout";
 import TabsLayout from "./TabsLayout";
 export default {
-  name: "tabs",
+  name: "Tabs",
   components: {
     TabsLayout,
     PillsLayout,
@@ -144,6 +148,22 @@ export default {
       };
     }
   },
+  watch: {
+    value(newVal) {
+      this.findAndActivateTab(newVal);
+    }
+  },
+  mounted() {
+    this.$nextTick(() => {
+      if (this.value) {
+        this.findAndActivateTab(this.value);
+      } else {
+        if (this.tabs.length > 0) {
+          this.activateTab(this.tabs[0]);
+        }
+      }
+    });
+  },
   methods: {
     findAndActivateTab(title) {
       let tabToActivate = this.tabs.find(t => t.title === title);
@@ -178,21 +198,5 @@ export default {
       }
     }
   },
-  mounted() {
-    this.$nextTick(() => {
-      if (this.value) {
-        this.findAndActivateTab(this.value);
-      } else {
-        if (this.tabs.length > 0) {
-          this.activateTab(this.tabs[0]);
-        }
-      }
-    });
-  },
-  watch: {
-    value(newVal) {
-      this.findAndActivateTab(newVal);
-    }
-  }
 };
 </script>

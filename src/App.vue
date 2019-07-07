@@ -1,13 +1,16 @@
 <template>
-    <div id="app">
-        <router-view name="header"></router-view>
-        <main>
-            <fade-transition origin="center" mode="out-in" :duration="250">
-                <router-view/>
-            </fade-transition>
-        </main>
-        <router-view name="footer"></router-view>
-    </div>
+  <div id="app">
+    <router-view name="header"/>
+    <main>
+      <fade-transition 
+        :duration="250" 
+        origin="center" 
+        mode="out-in">
+        <router-view/>
+      </fade-transition>
+    </main>
+    <router-view name="footer"/>
+  </div>
 </template>
 <script>
 import { FadeTransition } from "vue2-transitions";

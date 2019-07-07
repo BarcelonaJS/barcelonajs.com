@@ -1,18 +1,20 @@
 <template>
-    <button type="button" class="navbar-toggler"
-            data-toggle="collapse"
-            @click="handleClick"
-            :data-target="`#${target}`"
-            :aria-controls="target"
-            :aria-expanded="expanded"
-            aria-label="Toggle navigation">
-        <span></span>
-        <span></span>
-    </button>
+  <button 
+    :data-target="`#${target}`" 
+    :aria-controls="target"
+    :aria-expanded="expanded"
+    type="button"
+    class="navbar-toggler"
+    data-toggle="collapse"
+    aria-label="Toggle navigation"
+    @click="handleClick">
+    <span/>
+    <span/>
+  </button>
 </template>
 <script>
 export default {
-  name: "close-button",
+  name: "CloseButton",
   props: {
     target: {
       type: [String, Number],

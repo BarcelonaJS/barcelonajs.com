@@ -1,29 +1,32 @@
 <template>
-    <component class="dropdown"
-               :is="tag"
-               :class="[{show: isOpen}, {'dropdown': direction === 'down'}, {'dropup': direction ==='up'}]"
-               aria-haspopup="true"
-               :aria-expanded="isOpen"
-               @click="toggleDropDown"
-               v-click-outside="closeDropDown">
+  <component 
+    v-click-outside="closeDropDown"
+    :is="tag"
+    :class="[{show: isOpen}, {'dropdown': direction === 'down'}, {'dropup': direction ==='up'}]"
+    :aria-expanded="isOpen"
+    class="dropdown"
+    aria-haspopup="true"
+    @click="toggleDropDown">
 
-        <slot name="title">
-            <a class="dropdown-toggle nav-link"
-               :class="{'no-caret': hideArrow}"
-               data-toggle="dropdown">
-                <i :class="icon"></i>
-                <span class="no-icon">{{title}}</span>
-            </a>
-        </slot>
-        <ul class="dropdown-menu"
-            :class="[{'dropdown-menu-right': position === 'right'}, {show: isOpen}, menuClasses]">
-            <slot></slot>
-        </ul>
-    </component>
+    <slot name="title">
+      <a 
+        :class="{'no-caret': hideArrow}"
+        class="dropdown-toggle nav-link"
+        data-toggle="dropdown">
+        <i :class="icon"/>
+        <span class="no-icon">{{ title }}</span>
+      </a>
+    </slot>
+    <ul 
+      :class="[{'dropdown-menu-right': position === 'right'}, {show: isOpen}, menuClasses]"
+      class="dropdown-menu">
+      <slot/>
+    </ul>
+  </component>
 </template>
 <script>
 export default {
-  name: "base-dropdown",
+  name: "BaseDropdown",
   props: {
     direction: {
       type: String,

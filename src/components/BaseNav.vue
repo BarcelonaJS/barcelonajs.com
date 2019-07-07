@@ -1,41 +1,51 @@
 <template>
-    <nav class="navbar"
-         :class="[
-            {'navbar-expand-lg': expand},
-            {[`navbar-${effect}`]: effect},
-            {'navbar-transparent': transparent},
-            {[`bg-${type}`]: type},
-            {'rounded': round}
-         ]">
-        <div class="container">
-            <slot name="container-pre"></slot>
-            <slot name="brand">
-                <a class="navbar-brand" href="#" @click.prevent="onTitleClick">
-                    {{title}}
-                </a>
-            </slot>
-            <navbar-toggle-button :toggled="toggled"
-                                  :target="contentId"
-                                  @click.native.stop="toggled = !toggled">
-            </navbar-toggle-button>
+  <nav 
+    :class="[
+      {'navbar-expand-lg': expand},
+      {[`navbar-${effect}`]: effect},
+      {'navbar-transparent': transparent},
+      {[`bg-${type}`]: type},
+      {'rounded': round}
+    ]"
+    class="navbar">
+    <div class="container">
+      <slot name="container-pre"/>
+      <slot name="brand">
+        <a 
+          class="navbar-brand" 
+          href="#" 
+          @click.prevent="onTitleClick">
+          {{ title }}
+        </a>
+      </slot>
+      <navbar-toggle-button 
+        :toggled="toggled"
+        :target="contentId"
+        @click.native.stop="toggled = !toggled"/>
 
-            <slot name="container-after"></slot>
+      <slot name="container-after"/>
 
-            <div class="collapse navbar-collapse" :class="{show: toggled}" :id="contentId" v-click-outside="closeMenu">
-                <div class="navbar-collapse-header">
-                    <slot name="content-header" :close-menu="closeMenu"></slot>
-                </div>
-                <slot :close-menu="closeMenu"></slot>
-            </div>
+      <div 
+        v-click-outside="closeMenu" 
+        :class="{show: toggled}" 
+        :id="contentId" 
+        class="collapse navbar-collapse">
+        <div class="navbar-collapse-header">
+          <slot 
+            :close-menu="closeMenu" 
+            name="content-header"/>
         </div>
-    </nav>
+        <slot :close-menu="closeMenu"/>
+      </div>
+    </div>
+  </nav>
 </template>
 <script>
 import { FadeTransition } from "vue2-transitions";
 import NavbarToggleButton from "./NavbarToggleButton";
 
 export default {
-  name: "base-nav",
+  name: "BaseNav",
   components: {
     FadeTransition,
     NavbarToggleButton
