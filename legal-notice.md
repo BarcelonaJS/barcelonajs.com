@@ -10,7 +10,6 @@ BarcelonaJS reserves the right to modify any type of information that may appear
 
 Domain name: [barcelonajs.com](https://barcelonajs.com) Commercial name: BARCELONA JS 
 Email: [hello@barcelonajs.com](mailto:hello@barcelonajs.com)
-INTELLECTUAL AND INDUSTRIAL PROPERTY RIGHTS
 
 ## 2. INTELLECTUAL AND INDUSTRIAL PROPERTY RIGHTS
 The website, including but not limited to its programming, editing, compilation and other elements necessary for its operation, the designs, logos, text and/or graphics, are owned by the CONTROLLER or, if applicable, they expressly hold a license or an express authorisation by the authors. All website contents are duly protected by intellectual and industrial property laws, and are registered in the corresponding public registries.
