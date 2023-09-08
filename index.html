@@ -32,62 +32,38 @@
     />
     <meta name="twitter:image" content="/logo.png" />
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
-    <link href="/tailwind.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
   </head>
-
   <body>
-    <div class="relative bg-white overflow-hidden">
-      <div class="max-w-7xl mx-auto">
-        <div
-          class="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32"
-        >
-          <svg
-            class="hidden lg:block absolute right-0 inset-y-0 h-full w-48 text-white transform translate-x-1/2"
-            fill="currentColor"
-            viewBox="0 0 100 100"
-            preserveAspectRatio="none"
-            aria-hidden="true"
-          >
-            <polygon points="50,0 100,0 50,100 0,100" />
+    <section>
+      <div class="main">
+        <div class="main_content">
+          <svg fill="currentColor" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+            <polygon points="50,0 100,0 50,100 0,100"></polygon>
           </svg>
 
-          <div class="relative pt-6 px-4 sm:px-6 lg:px-8">
-            <nav
-              class="relative flex items-center justify-between sm:h-10 lg:justify-start"
-              aria-label="Global"
-            >
-              <div
-                class="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0"
-              >
-                <div class="flex items-center justify-between w-full md:w-auto">
-                  <img class="h-8 w-auto sm:h-10" src="logo.png" />
-                  <div class="-mr-2 flex items-center md:hidden">
+          <div>
+            <nav aria-label="Global">
+              <div>
+                <div>
+                  <img src="logo.png">
+                  <div>
                   </div>
                 </div>
               </div>
             </nav>
           </div>
 
-          <main
-            class="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28"
-          >
-            <div class="sm:text-center lg:text-left">
-              <h1
-                class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl"
-              >
-                <span class="block xl:inline">Your JS community</span>
-                <span class="block text-red-600 xl:inline"
-                  >in Barcelona</span
-                >
+          <main>
+            <div>
+              <h1>
+                <span class="class1">Your JS community</span>
+                <span class="class2">in Barcelona</span>
               </h1>
-              <p
-                class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0"
-              >
+              <p>
                 Join the largest javascript community in barcelona, we run meetup events every month. Free conference tickets available to the community.
               </p>
-              <div
-                class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start"
-              >
+              <div>
                 <!--
                 <div class="rounded-md shadow">
                   <a
@@ -98,8 +74,8 @@
                   </a>
                 </div>
                 -->
-                <div class="mt-3 sm:mt-0 sm:ml-3">
-                    <a href="https://twitter.com/bcnjs" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-red-700 bg-red-100 hover:bg-red-200 md:py-4 md:text-lg md:px-10">
+                <div>
+                    <a href="https://twitter.com/bcnjs">
                       Follow Us!
                     </a>
                   </div>
@@ -108,101 +84,62 @@
           </main>
         </div>
       </div>
-      <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-        <img
-          class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
-          src="bg.jpg?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80"
-          alt=""
-        />
+      <div class="class4">
+        <img src="bg.jpg?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=2850&amp;q=80" alt="">
       </div>
-    </div>
-    <!-- This example requires Tailwind CSS v2.0+ -->
-    <div class="py-12 bg-gray-100">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="lg:text-center">
-          <h2
-            class="text-base text-red-600 font-semibold tracking-wide uppercase"
-          >
+    </section>
+    <section>
+      <div class="class7">
+        <div class="class9">
+          <h2>
             Community values
           </h2>
-          <p
-            class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl"
-          >
+          <p class="class10">
             A better way to share
           </p>
-          <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+          <p class="class11">
             Join the community and enjoy sharing your learning journey, network with like mined people and free beer onces covid will allow.
           </p>
         </div>
 
-        <div class="mt-10">
-          <dl
-            class="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10"
-          >
-            <div class="flex">
-              <div class="flex-shrink-0">
-                <div
-                  class="flex items-center justify-center h-12 w-12 rounded-md bg-red-500 text-white"
-                >
+        <div class="class12">
+          <dl>
+            <div>
+              <div class="class13">
+                <div>
                   <!-- Heroicon name: globe-alt -->
-                  <svg
-                    class="h-6 w-6"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    aria-hidden="true"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"
-                    />
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path>
                   </svg>
                 </div>
               </div>
-              <div class="ml-4">
-                <dt class="text-lg leading-6 font-medium text-gray-900">
+              <div class="class14">
+                <dt>
                   For Everyone
                 </dt>
-                <dd class="mt-2 text-base text-gray-500">
+                <dd>
                   We think coding is awesome and everyone should feel welcome at
                   our event. This includes that we are expecting all
                   participants to be awesome to each other and respect the
-                  <a href="https://github.com/BarcelonaJS/organization/blob/main/code-of-conduct.md">Code of Conduct</a>
+                  <a href="https://github.com/BarcelonaJS/organization/blob/main/code-of-conduct.md" class="class29">Code of Conduct</a>
                 </dd>
               </div>
             </div>
 
-            <div class="flex">
-              <div class="flex-shrink-0">
-                <div
-                  class="flex items-center justify-center h-12 w-12 rounded-md bg-red-500 text-white"
-                >
+            <div>
+              <div class="class15">
+                <div>
                   <!-- Heroicon name: scale -->
-                  <svg
-                    class="h-6 w-6"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    aria-hidden="true"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"
-                    />
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"></path>
                   </svg>
                 </div>
               </div>
-              <div class="ml-4">
-                <dt class="text-lg leading-6 font-medium text-gray-900">
+              <div class="class16">
+                <dt>
                   Open source
                 </dt>
-                <dd class="mt-2 text-base text-gray-500">
+                <dd>
                   Open source is the heart of BarcelonaJS. All our events, our
                   website and our software are open source and can be modified
                   by everyone.
@@ -210,188 +147,122 @@
               </div>
             </div>
 
-            <div class="flex">
-              <div class="flex-shrink-0">
-                <div
-                  class="flex items-center justify-center h-12 w-12 rounded-md bg-red-500 text-white"
-                >
+            <div>
+              <div class="class17">
+                <div>
                   <!-- Heroicon name: lightning-bolt -->
-                  <svg
-                    class="h-6 w-6"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    aria-hidden="true"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M13 10V3L4 14h7v7l9-11h-7z"
-                    />
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
                   </svg>
                 </div>
               </div>
-              <div class="ml-4">
-                <dt class="text-lg leading-6 font-medium text-gray-900">
+              <div class="class18">
+                <dt>
                   Non Profit
                 </dt>
-                <dd class="mt-2 text-base text-gray-500">All our events are not-for-profit and run by volunteers.</dd>
+                <dd>All our events are not-for-profit and run by volunteers.</dd>
               </div>
             </div>
           </dl>
         </div>
       </div>
-    </div>
-    <div class="py-12 bg-white">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="lg:text-center">
-          <h2
-            class="text-base text-red-600 font-semibold tracking-wide uppercase"
-          >
+    </section>
+    <section>
+      <div class="class20">
+        <div class="class21">
+          <h2>
             Collaborate
           </h2>
-          <p
-            class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl"
-          >
+          <p class="class22">
             Help maintain the community
           </p>
-          <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+          <p class="class23">
             Too keep this community we need attendatns, speakers and sponsors.
           </p>
         </div>
 
-        <div class="mt-10">
-          <dl
-            class="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10"
-          >
-            <div class="flex">
-              <div class="flex-shrink-0">
-                <div
-                  class="flex items-center justify-center h-12 w-12 rounded-md bg-red-500 text-white"
-                >
+        <div class="class24">
+          <dl>
+            <div>
+              <div class="class25">
+                <div>
                   <!-- Heroicon name: globe-alt -->
-                  <svg
-                    class="h-6 w-6"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    aria-hidden="true"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"
-                    />
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path>
                   </svg>
                 </div>
               </div>
-              <div class="ml-4">
-                <dt class="text-lg leading-6 font-medium text-gray-900">
+              <div class="class26">
+                <dt>
                   Join the community
                 </dt>
-                <dd class="mt-2 text-base text-gray-500">
-                  <a href="https://twitter.com/bcnjs">Follow us</a> to keep with upcoming events.
+                <dd>
+                  <a href="https://twitter.com/bcnjs" class="class29">Follow us</a> to keep with upcoming events.
                 </dd>
               </div>
             </div>
 
-            <div class="flex">
-              <div class="flex-shrink-0">
-                <div
-                  class="flex items-center justify-center h-12 w-12 rounded-md bg-red-500 text-white"
-                >
+            <div>
+              <div class="class27">
+                <div>
                   <!-- Heroicon name: scale -->
-                  <svg
-                    class="h-6 w-6"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    aria-hidden="true"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"
-                    />
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"></path>
                   </svg>
                 </div>
               </div>
-              <div class="ml-4">
-                <dt class="text-lg leading-6 font-medium text-gray-900">
+              <div class="class28">
+                <dt>
                   Sponsor events
                 </dt>
-                <dd class="mt-2 text-base text-gray-500">
-                  As a company you may want help run events, as we always are in need of speakers, venue and maybe some networking drinks and food, up to you. If you feel so, please <a class="text-red-600" href="https://github.com/BarcelonaJS/events/issues/new?assignees=&labels=Sponsor+Request+%3Amoney_with_wings%3A&template=sponsor-request.md&title=Sponsor+Request%3A+%3Ccompany+name%3E">fill this form</a>.
+                <dd>
+                  As a company you may want help run events, as we always are in need of speakers, venue and maybe some networking drinks and food, up to you. If you feel so, please <a class="class30" href="https://github.com/BarcelonaJS/events/issues/new?assignees=&amp;labels=Sponsor+Request+%3Amoney_with_wings%3A&amp;template=sponsor-request.md&amp;title=Sponsor+Request%3A+%3Ccompany+name%3E">fill this form</a>.
                 </dd>
               </div>
             </div>
 
-            <div class="flex">
-              <div class="flex-shrink-0">
-                <div
-                  class="flex items-center justify-center h-12 w-12 rounded-md bg-red-500 text-white"
-                >
+            <div>
+              <div class="class31">
+                <div>
                   <!-- Heroicon name: lightning-bolt -->
-                  <svg
-                    class="h-6 w-6"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    aria-hidden="true"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M13 10V3L4 14h7v7l9-11h-7z"
-                    />
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
                   </svg>
                 </div>
               </div>
-              <div class="ml-4">
-                <dt class="text-lg leading-6 font-medium text-gray-900">
+              <div class="class32">
+                <dt>
                   Share with all
                 </dt>
-                <dd class="mt-2 text-base text-gray-500">
-                  We all go thought difficult or fun challenges while working, BcnJS events are the place to share those, or any interesting topic. If it's your first talk we can help you. If want to present a talk, please <a class="text-red-600" href="https://github.com/BarcelonaJS/events/issues/new?assignees=&labels=Talk%3A+Feature+%3Acinema%3A&template=talk-feature.md&title=Talk+Proposal%3A+%3Ctalk+title%3E">fill this form</a>.
+                <dd>
+                  We all go thought difficult or fun challenges while working, BcnJS events are the place to share those, or any interesting topic. If it's your first talk we can help you. If want to present a talk, please <a class="class33" href="https://github.com/BarcelonaJS/events/issues/new?assignees=&amp;labels=Talk%3A+Feature+%3Acinema%3A&amp;template=talk-feature.md&amp;title=Talk+Proposal%3A+%3Ctalk+title%3E">fill this form</a>.
                 </dd>
               </div>
             </div>
           </dl>
         </div>
       </div>
-    </div>
-    <footer class="footer bg-gray-900 relative pt-1">
-      <div class="container mx-auto">
-        <div class="sm:flex sm:mt-8 ">
-          <div
-            class="mt-8 sm:mt-0 sm:w-full sm:px-8 flex flex-col items-center space-y-4"
-          >
-          <a href="#"><img src=logo.png class=logo alt="BarcelonaJS Logo"></a><br>
-          <div class="social flex space-x-4">
-            <a href=https://twitter.com/bcnjs>
-              <img src=/twitter.svg class="icon w-5">
-            </a>
-            <a href=https://github.com/BarcelonaJS>
-              <img src=/github.svg class="icon w-5">
-            </a>
-          </div>
+    </section >
+    <footer class="footer">
+      <div class="footer_content">
+        <div class="footer_links">
+          <div class="footer_links-content">
+            <img src="logo.png" class="footer_logo" alt="BarcelonaJS Logo"><br>
+            <div class="footer_socials">
+              <a href="https://twitter.com/bcnjs" class="footer_social">
+                <img src="/twitter.svg" alt="Twitter" class="footer_logo-social">
+              </a>
+              <a href="https://github.com/BarcelonaJS" class="footer_social">
+                <img src="/github.svg" alt="Github" class="footer_logo-social">
+              </a>
+            </div>
           </div>
         </div>
       </div>
-      <div class="container mx-auto">
-        <div
-          class="flex flex-col items-center"
-        >
-          <div class="sm:w-2/3 text-center py-6">
-            <p class="text-sm text-white font-bold mb-2">
+      <div class="footer_content">
+        <div class="footer_bottom">
+          <div class="footer_bottom-content">
+            <p class="footer_text">
               © 2021 BarcelonaJS • Hosted on GitHub/Netify • <a href="https://github.com/BarcelonaJS/organization/blob/main/code-of-conduct.md">Code of Conduct</a> • <a href="https://github.com/BarcelonaJS/barcelonajs.com/blob/main/legal-notice.md">Legal Notice</a>
             </p>
           </div>
