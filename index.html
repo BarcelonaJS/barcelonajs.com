@@ -27,9 +27,81 @@
 </head>
 
 <body>
+  <header class="bg-gray-100">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
+      <div class="flex lg:flex-1">
+        <a href="#" class="-m-1.5 p-1.5">
+          <span class="sr-only">Your Company</span>
+          <img class="h-8 w-auto" src="logo.svg" alt="">
+        </a>
+      </div>
+      <div class="flex lg:hidden">
+        <button id="toggleButtonOn" type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+          <span class="sr-only">Open main menu</span>
+          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+            aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+        </button>
+      </div>
+      <div class="hidden lg:flex lg:gap-x-12">
+        <a href="#values" class="text-sm font-semibold leading-6 text-gray-900">Values</a>
+        <a href="#collaborate" class="text-sm font-semibold leading-6 text-gray-900">Collaborate</a>
+        <a href="#organizers" class="text-sm font-semibold leading-6 text-gray-900">Organizers</a>
+        <a href="#partners" class="text-sm font-semibold leading-6 text-gray-900">Partners</a>
+
+      </div>
+      <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+        <a href="https://www.meetup.com/barcelonajs/"
+          class=" block px-4 py-2 border border-transparent text-center text-base font-medium rounded-md text-red-700 bg-red-100 hover:bg-red-200">Join
+          next meetup</a>
+      </div>
+    </nav>
+    <!-- Mobile menu, show/hide based on menu open state. -->
+    <div id="flyoutMenu" class="hidden" role="dialog" aria-modal="true">
+      <!-- Background backdrop, show/hide based on slide-over state. -->
+      <div class="fixed inset-0 z-10"></div>
+      <div
+        class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+        <div class="flex items-center justify-between">
+          <a href="#" class="-m-1.5 p-1.5">
+            <span class="sr-only">Your Company</span>
+            <img class="h-8 w-auto" src="logo.svg" alt="">
+          </a>
+          <button id="toggleButtonOff" class="-m-2.5 rounded-md p-2.5 text-gray-700">
+            <span class="sr-only">Close menu</span>
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+              aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        <div class="mt-6 flow-root">
+          <div class="-my-6 divide-y divide-gray-500/10">
+            <div class="space-y-2 py-6">
+              <a href="#values"
+                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 mobile-menu-item">Values</a>
+              <a href="#collaborate"
+                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 mobile-menu-item">Collaborate</a>
+              <a href="#organizers"
+                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 mobile-menu-item">Organizers</a>
+              <a href="#partners"
+                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 mobile-menu-item">Partners</a>
+            </div>
+            <div class="py-6">
+              <a href="https://www.meetup.com/barcelonajs/"
+                class=" block px-4 py-2 border border-transparent text-center text-base font-medium rounded-md text-red-700 bg-red-100 hover:bg-red-200">Join
+                next meetup</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
   <div class="relative bg-white overflow-hidden">
     <div class="max-w-7xl mx-auto">
-      <div class="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
+      <div class="relative z-9 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
         <!-- https://heroicons.com -->
         <svg class="hidden lg:block absolute right-0 inset-y-0 h-full w-48 text-white transform translate-x-1/2"
           fill="currentColor" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
@@ -40,7 +112,7 @@
           <nav class="relative flex items-center justify-between sm:h-10 lg:justify-start" aria-label="Global">
             <div class="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
               <div class="flex items-center justify-between w-full md:w-auto">
-                <img class="h-8 w-auto sm:h-10" src="logo.png" />
+                <!-- <img class="h-8 w-auto sm:h-10" src="logo.svg" /> -->
                 <div class="-mr-2 flex items-center md:hidden">
                 </div>
               </div>
@@ -62,11 +134,11 @@
             <div class="mt-5 sm:mt-8">
               <div class="flex flex-col md:flex-row gap-2 md:gap-8">
                 <a href="https://www.meetup.com/barcelonajs/"
-                  class=" block px-8 py-3 border border-transparent text-center text-base font-medium rounded-md text-red-700 bg-red-100 hover:bg-red-200 md:py-4 md:text-lg md:px-10">
+                  class=" block px-4 py-2 border border-transparent text-center text-base font-medium rounded-md text-red-700 bg-red-100 hover:bg-red-200 md:py-4 md:text-lg md:px-10">
                   Join next meetup
                 </a>
                 <a href="https://twitter.com/bcnjs"
-                  class="block px-8 py-3 border border-transparent text-center text-base font-medium rounded-md text-white bg-blue-500 hover:bg-blue-700 md:py-4 md:text-lg md:px-10">
+                  class="block px-4 py-2 border border-transparent text-center text-base font-medium rounded-md text-white bg-blue-500 hover:bg-blue-700 md:py-4 md:text-lg md:px-10">
                   Follow Us
                 </a>
               </div>
@@ -80,7 +152,7 @@
         src="bg.jpg?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80" alt="" />
     </div>
   </div>
-  <div class="py-12 bg-gray-100">
+  <div id="values" class="py-12 bg-gray-100">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="lg:text-center">
         <h2 class="text-base text-red-600 font-semibold tracking-wide uppercase">
@@ -165,7 +237,7 @@
       </div>
     </div>
   </div>
-  <div class="py-12 bg-white">
+  <div id="collaborate" class="py-12 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="lg:text-center">
         <h2 class="text-base text-red-600 font-semibold tracking-wide uppercase">
@@ -198,7 +270,8 @@
                 Ask you company to Sponsor
               </dt>
               <dd class="mt-2 text-base text-gray-500">
-                If your company wants to support the community, we're always looking for event hosts. Interested? Please fill out 
+                If your company wants to support the community, we're always looking for event hosts. Interested? Please
+                fill out
                 <a class="text-red-600"
                   href="https://github.com/BarcelonaJS/events/issues/new?assignees=&labels=Sponsor+Request+%3Amoney_with_wings%3A&template=sponsor-request.md&title=Sponsor+Request%3A+%3Ccompany+name%3E">
                   this form
@@ -223,9 +296,9 @@
                 Share your experience
               </dt>
               <dd class="mt-2 text-base text-gray-500">
-                Faced challenges or had fun wins in tech? Share your stories at BcnJS. If it's your first talk, we've got your back. Want to present? Fill out 
-                <a
-                  class="text-red-600"
+                Faced challenges or had fun wins in tech? Share your stories at BcnJS. If it's your first talk, we've
+                got your back. Want to present? Fill out
+                <a class="text-red-600"
                   href="https://github.com/BarcelonaJS/events/issues/new?assignees=&labels=Talk%3A+Feature+%3Acinema%3A&template=talk-feature.md&title=Talk+Proposal%3A+%3Ctalk+title%3E">
                   this form
                 </a>.
@@ -249,7 +322,8 @@
                 Join the community
               </dt>
               <dd class="mt-2 text-base text-gray-500">
-                Stay in the loop about future events by <a href="https://twitter.com/bcnjs">following us</a>. Be part of our ever-growing community.
+                Stay in the loop about future events by <a href="https://twitter.com/bcnjs">following us</a>. Be part of
+                our ever-growing community.
               </dd>
             </div>
           </div>
@@ -259,7 +333,7 @@
     </div>
   </div>
 
-  <div class="py-12 bg-gray-100">
+  <div id="organizers" class="py-12 bg-gray-100">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="lg:text-center">
         <h2 class="text-base text-red-600 font-semibold tracking-wide uppercase">
@@ -349,7 +423,7 @@
 
   </div>
 
-  <div class="py-12">
+  <div id="partners" class="py-12">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="lg:text-center">
         <h2 class="text-base text-red-600 font-semibold tracking-wide uppercase">
@@ -421,14 +495,15 @@
       <div class="flex flex-col items-center">
         <div class="sm:w-2/3 text-center py-6">
           <p class="text-sm text-white font-bold mb-2">
-            © 2023 BarcelonaJS • 
-            <a href="https://github.com/BarcelonaJS/organization/blob/main/code-of-conduct.md">Code of Conduct</a> • 
+            © 2023 BarcelonaJS •
+            <a href="https://github.com/BarcelonaJS/organization/blob/main/code-of-conduct.md">Code of Conduct</a> •
             <a href="https://github.com/BarcelonaJS/barcelonajs.com/blob/main/legal-notice.md">Legal Notice</a>
           </p>
         </div>
       </div>
     </div>
   </footer>
+  <script defer src="menu.js"></script>
 </body>
 
 </html>
