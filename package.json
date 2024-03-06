@@ -1,0 +1,16 @@
+{
+  "devDependencies": {
+    "tailwindcss": "^3.4.1"
+  },
+  "name": "barcelonajs.com",
+  "description": "PR are welcome",
+  "version": "1.0.0",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx tailwindcss -i ./main.css -o ./build.css --watch",
+    "build": "npx tailwindcss -i ./main.css -o ./build.css --minify",
+    "clean": "rm -rf /node_modules"
+  },
+  "author": "",
+  "license": "ISC"
+}
