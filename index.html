@@ -23,7 +23,7 @@
     content="BarcelonaJS is a monthly event for JavaScript developers, geeks and techies." />
   <meta name="twitter:image" content="/logo.png" />
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
-  <link href="/tailwind.css" rel="stylesheet" />
+  <link href="/build.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -31,8 +31,8 @@
     <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
       <div class="flex lg:flex-1">
         <a href="#" class="-m-1.5 p-1.5">
-          <span class="sr-only">Your Company</span>
-          <img class="h-8 w-auto" src="logo.svg" alt="">
+          <span class="sr-only">BarcelonaJS</span>
+          <img class="h-8 w-auto" src="logo.svg" />
         </a>
       </div>
       <div class="flex lg:hidden">
@@ -66,7 +66,7 @@
         class="fixed inset-y-0 right-0 z-20 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
         <div class="flex items-center justify-between">
           <a href="#" class="-m-1.5 p-1.5">
-            <span class="sr-only">Your Company</span>
+            <span class="sr-only">BarcelonaJS</span>
             <img class="h-8 w-auto" src="logo.svg" alt="">
           </a>
           <button id="toggleButtonOff" class="-m-2.5 rounded-md p-2.5 text-gray-700">
@@ -132,15 +132,19 @@
               Join the largest javascript community in barcelona, we run meetup events every month. Free
               tickets available to the community.
             </p>
-            <div class="mt-5 sm:mt-8">
-              <div class="flex flex-col md:flex-row gap-2 md:gap-8">
-                <a href="https://www.meetup.com/barcelonajs/"
-                  class=" block px-4 py-2 border border-transparent text-center text-base font-medium rounded-md text-red-700 bg-red-100 hover:bg-red-200 md:py-4 md:text-lg md:px-10">
-                  Join next meetup
+            <div class="mt-5 sm:mt-8 mx-auto">
+              <div class="flex flex-col md:flex-row gap-8 md:gap-8 justify-center">
+                <a href="https://www.meetup.com/barcelonajs/" class="block w-12">
+                  <img src="/media/social/meetup.svg" alt="meetup" class="">
                 </a>
-                <a href="https://twitter.com/bcnjs"
-                  class="block px-4 py-2 border border-transparent text-center text-base font-medium rounded-md text-white bg-blue-500 hover:bg-blue-700 md:py-4 md:text-lg md:px-10">
-                  Follow Us
+                <a href="https://x.com/bcnjs" class="block w-12">
+                  <img src="/media/social/x.svg" alt="x" class="">
+                </a>
+                <a href="https://www.youtube.com/@BcnJS" class="block w-12">
+                  <img src="/media/social/youtube.svg" alt="youtube" class="">
+                </a>
+                <a href="https://www.linkedin.com/company/barcelonajs/" class="block w-12">
+                  <img src="/media/social/linkedin.svg" alt="youtube" class="">
                 </a>
               </div>
             </div>
@@ -271,13 +275,14 @@
                 Ask you company to Sponsor
               </dt>
               <dd class="mt-2 text-base text-gray-500">
-                If your company wants to support the community, we're always looking for event hosts. Interested? Please
-                fill out
-                <a class="text-red-600"
-                  href="https://github.com/BarcelonaJS/event-sponsors/issues/new?assignees=&labels=&projects=BarcelonaJS%2F2&template=event-sponsor.yml">
-                  this form
-                </a>.
+                If your company wants to support the community, we're always looking for event hosts. Interested?
               </dd>
+
+              <div class="mt-4 flex flex-row items-center justify-start">
+                <a href="https://github.com/BarcelonaJS/event-sponsors/issues/new?assignees=&labels=&projects=BarcelonaJS%2F2&template=event-sponsor.yml"
+                  class="block px-4 py-3 border border-transparent text-center text-base font-large rounded-md text-red-600 border-red-600 hover:text-white hover:bg-red-600">Sponsor
+                  the event</a>
+              </div>
             </div>
           </div>
 
@@ -297,13 +302,13 @@
                 Share your experience
               </dt>
               <dd class="mt-2 text-base text-gray-500">
-                Faced challenges or had fun wins in tech? Share your stories at BcnJS. If it's your first talk, we've
-                got your back. Want to present? Fill out
-                <a class="text-red-600"
-                  href="https://github.com/BarcelonaJS/talks/issues/new?assignees=&labels=Pending%3A+ready+for+review&projects=BarcelonaJS%2F2&template=new-talk.yml">
-                  this form
-                </a>.
+                Faced challenges or had fun wins in tech? Share your stories at BcnJS. Want to present?
               </dd>
+              <div class="mt-4 flex flex-row items-center justify-start">
+                <a href="https://github.com/BarcelonaJS/talks/issues/new?assignees=&labels=Pending%3A+ready+for+review&projects=BarcelonaJS%2F2&template=new-talk.yml"
+                  class="block px-4 py-3 border border-transparent text-center text-base font-large rounded-md text-red-600 border-red-600 hover:text-white hover:bg-red-600">Become
+                  a speaker</a>
+              </div>
             </div>
           </div>
 
@@ -326,6 +331,11 @@
                 Stay in the loop about future events by <a href="https://twitter.com/bcnjs">following us</a>. Be part of
                 our ever-growing community.
               </dd>
+              <div class="mt-4 flex flex-row items-center justify-start">
+                <a href="https://www.meetup.com/barcelonajs/"
+                  class="block px-4 py-3 border border-transparent text-center text-base font-large rounded-md text-red-600 border-red-600 hover:text-white hover:bg-red-600">Join
+                  the next meetup</a>
+              </div>
             </div>
           </div>
 
@@ -338,10 +348,10 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="lg:text-center">
         <h2 class="text-base text-red-600 font-semibold tracking-wide uppercase">
-          Organizers team
+          The team
         </h2>
         <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-
+          Organizers
         </p>
         <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
           The people that have been organizing the events over the years.
@@ -350,7 +360,7 @@
     </div>
 
     <div
-      class="max-w-7xl mx-auto mt-20 mb-10 grid grid-cols-1 md:grid-cols-4 lg:grid-cols-4 gap-8 gap-y-10 text-center">
+      class="max-w-7xl mx-auto mt-10 mb-10 grid grid-cols-1 md:grid-cols-4 lg:grid-cols-4 gap-8 gap-y-10 text-center">
 
       <div class="flex flex-col items-center">
         <img src="/media/team/dmitry.jpg" alt="Dmitry Zaets" class="w-36 h-36 rounded">
@@ -420,16 +430,10 @@
         </div>
       </div>
     </div>
-  </div>
-
-  <div id="founders" class="py-12 ">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="lg:text-center">
-        <h2 class="text-base text-red-600 font-semibold tracking-wide uppercase">
-          Honorable founders
-        </h2>
         <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-
+          Honorable founders
         </p>
         <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
           The people who founded the meetup in 2013 and grown it into one of the largest communities in Barcelona.
@@ -438,7 +442,7 @@
     </div>
 
     <div
-      class="max-w-7xl mx-auto mt-20 mb-10 grid grid-flow-row md:grid-flow-col justify-center auto-cols-max gap-44 gap-y-10 text-center">
+      class="max-w-7xl mx-auto mt-10 mb-10 grid grid-flow-row md:grid-flow-col justify-center auto-cols-max gap-44 gap-y-10 text-center">
 
       <div class="flex flex-col items-center">
         <img src="/media/founders/patrick.jpg" alt="Patrick Heneise" class="w-36 h-36 rounded">
@@ -458,7 +462,7 @@
     </div>
   </div>
 
-  <div id="partners" class="py-12 bg-gray-100">
+  <div id="partners" class="py-12">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="lg:text-center">
         <h2 class="text-base text-red-600 font-semibold tracking-wide uppercase">
@@ -472,7 +476,6 @@
         </p>
       </div>
     </div>
-
     <div
       class="max-w-7xl mx-auto mt-20 mb-10 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 gap-y-10 text-center">
 
@@ -513,9 +516,7 @@
       </div>
 
     </div>
-
   </div>
-
 
   <footer class="footer bg-gray-900 relative pt-1">
     <div class="container mx-auto">
@@ -540,7 +541,7 @@
       <div class="flex flex-col items-center">
         <div class="sm:w-2/3 text-center py-6">
           <p class="text-sm text-white font-bold mb-2">
-            © 2023 BarcelonaJS •
+            © 2024 BarcelonaJS •
             <a href="https://github.com/BarcelonaJS/organization/blob/main/code-of-conduct.md">Code of Conduct</a> •
             <a href="https://github.com/BarcelonaJS/barcelonajs.com/blob/main/legal-notice.md">Legal Notice</a>
           </p>
